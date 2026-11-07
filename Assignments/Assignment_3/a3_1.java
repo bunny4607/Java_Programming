@@ -1,25 +1,50 @@
 import java.util.Scanner ; 
 
-class Iterations {
-    public void Ittr (int iNo){
-        int iNo2 = 0 ; 
-        for (iNo2 =1 ; iNo2 <= iNo ; iNo2 ++ ){
-            System.out.print(iNo2*2+"\t");  
+class Display{
+    public void display (int iNo){
+        int i = 0 ;
+
+        for(i = 1 ; i<= iNo; i++){
+            System.out.print(2*i+"\t");
         }
+        System.out.println();
     }
 }
-public class a3_1 {
-    public static void main(String[] args) {
-        int iValue = 0 ;
-        Scanner scanner = new Scanner (System.in);
+public class a3_1{
+    public static void main(String A[]){
+        int iValue = 0 ; 
 
-        System.out.println("enter a number : ");
-        iValue = scanner.nextInt();
+        Scanner sc = new Scanner (System.in) ; 
+        Display dobj = new Display();
 
-        Iterations itter = new Iterations();
-        itter.Ittr(iValue);
+        System.out.println("Enter a number : ");
+        if(!sc.hasNextInt()){
+            System.err.println("invalid input"); 
+            System.exit(1); 
+        }
+        iValue = sc.nextInt(); 
 
-
+        dobj.display(iValue);
 
     }
 }
+/////////////////////////////////////////////////////////////////////////
+/// 
+///     sample outputs :
+/*    
+Enter a number : 
+4
+2	4	6	8	
+vedantbarne@Vedants-MacBook-Air-2 Assignment_3 % java a3_1.java
+Enter a number : 
+5
+2	4	6	8	10	
+vedantbarne@Vedants-MacBook-Air-2 Assignment_3 % java a3_1.java
+Enter a number : 
+6
+2	4	6	8	10	12 
+
+*/
+///
+/// 
+/////////////////////////////////////////////////////////////////////////
