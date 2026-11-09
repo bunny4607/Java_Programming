@@ -51,8 +51,6 @@ Enter marks :
 -40
 Invalid input 
 
-
-
 Enter marks :
 23
 Invalid input 
